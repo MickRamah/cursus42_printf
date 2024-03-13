@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_address.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:16:39 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/13 16:42:28 by zramahaz         ###   ########.fr       */
+/*   Created: 2024/03/13 08:33:45 by zramahaz          #+#    #+#             */
+/*   Updated: 2024/03/13 16:38:26 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(int c)
+static void	ft_putnbr_hex(long unsigned n)
 {
-	write(1, &c, 1);
+	if (n > 16)
+	{
+		ft_putnbr_hex(n / 16);
+		ft_putnbr_hex(n % 16);
+	}
+	else if (n > 9 && n < 16)
+		ft_putchar(n + 87);
+	else
+		ft_putchar(n + 48);
+}
+
+void	ft_print_address(va_list args)
+{
+	long unsigned	p;
+
+	p = (long unsigned)va_arg(args, void *);
+	ft_putchar(48);
+	ft_putchar('x');
+	ft_putnbr_hex(p);
 }

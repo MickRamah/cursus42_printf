@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:16:39 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/13 16:42:28 by zramahaz         ###   ########.fr       */
+/*   Created: 2024/03/13 07:41:17 by zramahaz          #+#    #+#             */
+/*   Updated: 2024/03/13 16:39:29 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(int c)
+void	ft_print_string(va_list args)
 {
-	write(1, &c, 1);
+	char	*str;
+
+	str = va_arg(args, char *);
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }

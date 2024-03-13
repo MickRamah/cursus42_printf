@@ -6,7 +6,7 @@
 #    By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/09 10:00:26 by zramahaz          #+#    #+#              #
-#    Updated: 2024/03/10 16:13:02 by zramahaz         ###   ########.fr        #
+#    Updated: 2024/03/13 09:44:47 by zramahaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_putchar.c ft_printf.c ft_putnbr.c
+SRC = ft_putchar.c ft_printf.c ft_putnbr.c ft_putnbr_hex.c ft_print_string.c \
+	ft_print_int.c ft_print_ui.c ft_choice.c gt_print_address
 
 OBJ = $(SRC:.c=.o)
 
