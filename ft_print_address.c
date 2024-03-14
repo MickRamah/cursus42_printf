@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 08:33:45 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 13:53:14 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:09:21 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static void	ft_putnbr_hex(long unsigned n, int *count)
 	else if (n > 9 && n < 16)
 	{
 		ft_putchar(n + 87);
-		*count = *count + 1;
+		*count += 1;
 	}
 	else
 	{
 		ft_putchar(n + 48);
-		*count = *count + 1;
+		*count += 1;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 08:18:58 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 08:57:44 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:11:31 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_putnbr_ui(unsigned int n, int *count)
 	else
 	{
 		ft_putchar(n + 48);
-		*count = *count + 1;
+		*count += 1;
 	}
 }
 

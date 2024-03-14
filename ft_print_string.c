@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 07:41:17 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 13:58:40 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:11:17 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	ft_print_string(va_list args, int *count)
 	{
 		ft_putchar(*str);
 		str++;
-		*count = *count + 1;
+		*count += 1;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 07:35:14 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 10:25:36 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:08:59 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_choice(const char *format, va_list args, int *count)
 	if (*format == 'c')
 	{
 		ft_putchar(va_arg(args, int));
-		*count = *count + 1;
+		*count += 1;
 	}
 	else if (*format == 's')
 		ft_print_string(args, count);
@@ -34,6 +34,6 @@ void	ft_choice(const char *format, va_list args, int *count)
 	else if (*format == '%')
 	{
 		ft_putchar('%');
-		*count = *count + 1;
+		*count += 1;
 	}
 }

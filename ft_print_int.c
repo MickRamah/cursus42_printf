@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 07:58:35 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 13:39:04 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:10:28 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_putnbr_i(int n, int *count)
 	if (n < 0)
 	{
 		ft_putchar(45);
-		*count = *count + 1;
+		*count += 1;
 		n = -n;
 		ft_putnbr_i(n, count);
 	}
@@ -29,7 +29,7 @@ static void	ft_putnbr_i(int n, int *count)
 	else
 	{
 		ft_putchar(n + 48);
-		*count = *count + 1;
+		*count += 1;
 	}
 }
 
@@ -40,7 +40,7 @@ void	ft_print_int(va_list args, int *count)
 	n = va_arg(args, int);
 	if (n == -2147483648)
 	{
-		*count = *count + 2;
+		*count += 2;
 		ft_putchar('-');
 		ft_putchar('2');
 		ft_putnbr_i(147483648, count);
