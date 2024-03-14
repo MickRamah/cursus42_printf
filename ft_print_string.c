@@ -20,12 +20,7 @@ void	ft_print_string(va_list args, int *count)
 	if (!str)
 	{
 		*count += 6;
-		write(1, "(", 1);
-		write(1, "n", 1);
-		write(1, "u", 1);
-		write(1, "l", 1);
-		write(1, "l", 1);
-		write(1, ")", 1);
+		write(1, "(null)", 6);
 		return ;
 	}
 	while (*str)

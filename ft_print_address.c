@@ -39,11 +39,7 @@ void	ft_print_address(va_list args, int *count)
 	if (!p)
 	{
 		*count += 5;
-		write(1, "(", 1);
-		write(1, "n", 1);
-		write(1, "i", 1);
-		write(1, "l", 1);
-		write(1, ")", 1);
+		write(1, "(nil)", 5);
 		return ;
 	}
 	*count += 2;
