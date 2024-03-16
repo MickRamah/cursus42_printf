@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:11:33 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/14 13:42:57 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:20:50 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,19 @@ int	ft_printf(const char *format, ...)
 
 /*int	main(void)
 {
-	int	len;
-	int	len2;
+	char	len = 'A';
+	char	*len2 = &len;
 
-	len = ft_printf(" %x \n", 16);
-	len2 = printf(" %x \n", 16);
-	printf("%d\n", len);
-	ft_printf("%d\n", len2);
+	ft_printf(" %s \n", len2);
+	printf(" %s \n", len2);
+	//printf("%d\n", len);
+	//ft_printf("%d\n", len2);
 
-	printf(" %d \n", INT_MIN + 1);
-	ft_printf(" %d \n", INT_MIN + 1);
+	//printf(" %d \n", INT_MIN + 1);
+	//ft_printf(" %d \n", INT_MIN + 1);
 
-	printf(" %p %p \n", 0, 0);
-	ft_printf(" %p %p \n", 0, 0);
+	printf(" %p  \n", len2);
+	ft_printf(" %p  \n", len2);
 
 	return (0);
 }*/
